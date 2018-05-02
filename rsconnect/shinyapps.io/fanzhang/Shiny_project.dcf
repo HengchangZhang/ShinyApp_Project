@@ -1,0 +1,12 @@
+name: Shiny_project
+title: Shiny_project
+username:
+account: fanzhang
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 335292
+bundleId: 1350476
+url: https://fanzhang.shinyapps.io/Shiny_project/
+when: 1525219727.58711
+asMultiple: FALSE
+asStatic: FALSE

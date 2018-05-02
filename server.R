@@ -12,7 +12,7 @@ shinyServer(function(input,output) {
     
     dygraph(filtered_PMI, main = 'ISM Manufacturing Index') %>%
       dyOptions(fillGraph = FALSE, fillAlpha = 0.9) %>%
-      dyAxis("x", drawGrid = FALSE) %>% dyLegend(width = 900) %>% dyRangeSelector()
+      dyAxis("x", drawGrid = FALSE) %>% dyLegend(width = 700) %>% dyRangeSelector()
    })
   
   output$pmi <- DT::renderDataTable({
@@ -29,7 +29,7 @@ shinyServer(function(input,output) {
     }
     
     dygraph(filtered_NMI, main = 'ISM Non-manufacturing Index') %>% 
-    dyOptions(fillGraph = FALSE, fillAlpha = 0.9) %>% dyAxis("x", drawGrid = FALSE)%>% dyLegend(width = 1000) %>% 
+    dyOptions(fillGraph = FALSE, fillAlpha = 0.9) %>% dyAxis("x", drawGrid = FALSE)%>% dyLegend(width = 700) %>% 
       dyRangeSelector()
     })
   
@@ -48,7 +48,7 @@ shinyServer(function(input,output) {
     
     dygraph(filtered_hs, main = 'U.S Housing Starts') %>%
     dyOptions(fillGraph = FALSE, fillAlpha = 0.9) %>%
-    dyAxis("x", drawGrid = FALSE) %>% dyLegend(width = 700) %>% dyRangeSelector()
+    dyAxis("x", drawGrid = FALSE) %>% dyLegend(width = 600) %>% dyRangeSelector()
     }) 
   
   
@@ -67,7 +67,7 @@ shinyServer(function(input,output) {
     
     dygraph(filtered_umcsi, main = 'University of Mechigan Consumer Sentiment Index') %>%
     dyOptions(fillGraph = FALSE, fillAlpha = 0.9) %>%
-    dyAxis("x", drawGrid = FALSE) %>% dyLegend(width = 800) %>% dyRangeSelector()
+    dyAxis("x", drawGrid = FALSE) %>% dyLegend(width = 650) %>% dyRangeSelector()
     })
   
   output$umcsi <- DT::renderDataTable({
@@ -81,7 +81,7 @@ shinyServer(function(input,output) {
       dyOptions(fillGraph = TRUE, fillAlpha = 0.4, colors = 'red') %>%
     dyAxis("x", drawGrid = FALSE) %>% dyBarChart() %>% dyAxis("y", label = "% Percentage as Annualized Rate") %>%
     
-    dyLegend(width = 600)  %>% dyRangeSelector() 
+    dyLegend(width = 500)  %>% dyRangeSelector() 
     
     }) 
   
@@ -97,7 +97,7 @@ shinyServer(function(input,output) {
       dyHighlight(highlightSeriesOpts = list(strokeWidth = 3)) %>%
       dyAxis("x", drawGrid = FALSE) %>%
       dyAxis("y", label = "Monthly Adjusted closed Prices") %>%
-      dyRangeSelector()  %>% dyLegend(width = 650) %>% 
+      dyRangeSelector()  %>% dyLegend(width = 600) %>% 
       dyHighlight(highlightCircleSize = 5, highlightSeriesBackgroundAlpha = 0.8,hideOnMouseOut = FALSE)
     
     })
@@ -121,7 +121,7 @@ shinyServer(function(input,output) {
       dyAxis("x", drawGrid = FALSE) %>% dyAxis("y", label = "Components  Against  GDP  growth") %>%
       dyBarSeries("real.gdp",fillGraph = TRUE, axis = 'y2') %>% 
       dyAxis("y2", label = "Quarterly Real GDP Growth Rate") %>%
-      dyLegend(width = 1000)  %>% dyRangeSelector() 
+      dyLegend(width = 700)  %>% dyRangeSelector() 
     
     
     
